@@ -17,11 +17,23 @@
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior: none;
     touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     background: radial-gradient(ellipse at top, #0f1419 0%, #0a0e1a 50%, #060810 100%);
     background-attachment: fixed;
     color: #ffffff;
     min-height: 100vh;
+  }
+
+  body.scratch-active {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  html.scratch-active {
+    overflow: hidden !important;
   }
 
   * {
