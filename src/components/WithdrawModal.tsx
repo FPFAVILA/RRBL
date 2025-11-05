@@ -277,7 +277,7 @@ export const WithdrawModal: React.FC<WithdrawModalProps> = ({
                 <div className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                   <p className="text-green-700 text-xs leading-relaxed">
-                    Apos verificacao com deposito de R$ 14,70, voce podera sacar todo o seu saldo disponivel
+                    Apos verificacao voce podera sacar todo o seu saldo disponivel
                   </p>
                 </div>
               </div>
