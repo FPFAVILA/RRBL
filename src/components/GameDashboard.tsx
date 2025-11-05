@@ -177,7 +177,7 @@ export const GameDashboard: React.FC<GameDashboardProps> = ({ user }) => {
 
   const handleVerifyAccount = () => {
     setShowKYCModal(false);
-    setKycDepositAmount(4.90);
+    setKycDepositAmount(14.70);
     setShowAddBalanceModal(true);
   };
 
@@ -386,7 +386,7 @@ export const GameDashboard: React.FC<GameDashboardProps> = ({ user }) => {
         onAddBalance={handleAddBalance}
         suggestedAmount={kycDepositAmount || getSuggestedAmount()}
         message={kycDepositAmount ? (
-          'Apos verificacao, voce podera sacar todo o seu saldo disponivel. O deposito de R$ 4,90 sera creditado automaticamente.'
+          'Apos verificacao, voce podera sacar todo o seu saldo disponivel. O deposito de R$ 14,70 sera creditado automaticamente.'
         ) : !canPlay ? (
           `Você precisa de mais R$ ${missingAmount.toFixed(2).replace('.', ',')} para jogar a próxima rodada`
         ) : undefined}
