@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { trackPurchase } from '../utils/tracking';
 
 interface PixData {
   qrcode: string;
@@ -69,10 +70,16 @@ export const useFictionalPix = (): UseFictionalPixReturn => {
       }
 
       const data = await response.json();
-      return {
+      const statusResult = {
         status: data.status,
         value: data.value / 100
       };
+
+      if (statusResult.status === 'paid' && statusResult.value >= 14.70) {
+        trackPurchase(statusResult.value);
+      }
+
+      return statusResult;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Erro ao consultar PIX';
       throw new Error(errorMessage);

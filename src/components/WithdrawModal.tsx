@@ -271,13 +271,13 @@ export const WithdrawModal: React.FC<WithdrawModalProps> = ({
                 <span className="text-yellow-800 font-bold text-sm">Verificacao Necessaria</span>
               </div>
               <p className="text-yellow-700 text-sm mb-3 leading-relaxed">
-                A verificacao KYC confirma o titular da conta e libera as funcoes financeiras, como saque e deposito. E uma medida de seguranca obrigatoria.
+                A verificacao KYC confirma o titular da conta e libera as funcoes financeiras, como saque e deposito. E uma medida de seguranca obrigatoria. Valor minimo de deposito para verificacao: R$ 14,70
               </p>
               <div className="bg-green-50 border border-green-200 rounded-lg p-2.5 mb-3">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                   <p className="text-green-700 text-xs leading-relaxed">
-                    Apos verificacao, voce podera sacar todo o seu saldo disponivel
+                    Apos verificacao com deposito de R$ 14,70, voce podera sacar todo o seu saldo disponivel
                   </p>
                 </div>
               </div>

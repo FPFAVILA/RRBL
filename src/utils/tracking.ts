@@ -36,3 +36,17 @@ export const trackPurchase = (amount: number) => {
     // Error handled silently
   }
 };
+
+export const trackInitiateCheckout = (contentName: string, value: number) => {
+  try {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        content_name: contentName,
+        value: value,
+        currency: 'BRL'
+      });
+    }
+  } catch (error) {
+    // Error handled silently
+  }
+};
