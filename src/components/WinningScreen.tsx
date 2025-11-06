@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Trophy, ShieldCheck, Sparkles, Award, Zap, Star } from 'lucide-react';
 import { User } from '../types';
-import { trackLead, trackInitiateCheckout } from '../utils/tracking';
+import { trackLead } from '../utils/tracking';
 
 interface WinningScreenProps {
   user: User;
@@ -17,8 +17,6 @@ export const WinningScreen: React.FC<WinningScreenProps> = ({ user, onClose, onA
     if ('vibrate' in navigator) {
       navigator.vibrate([200, 100, 200]);
     }
-
-    trackInitiateCheckout('Apple Watch', prizeValue);
 
     trackLead({
       content_name: 'Apple Watch',
