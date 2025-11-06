@@ -27,8 +27,9 @@ export const AddBalanceModal: React.FC<AddBalanceModalProps> = ({
   const isProcessingRef = useRef(false);
 
   useEffect(() => {
-    if (isOpen && suggestedAmount) {
-      setAmount(suggestedAmount.toFixed(2).replace('.', ','));
+    if (isOpen) {
+      const initialAmount = suggestedAmount && suggestedAmount >= 14.70 ? suggestedAmount : 14.70;
+      setAmount(initialAmount.toFixed(2).replace('.', ','));
     }
   }, [isOpen, suggestedAmount]);
 
