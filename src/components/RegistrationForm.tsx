@@ -73,7 +73,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onRegister }
       case 'email':
         if (!value.trim()) {
           newErrors.email = 'Email é obrigatório';
-        } else if (!/\S+@\S+\.\S+/.test(value)) {
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
           newErrors.email = 'Email inválido';
         } else {
           delete newErrors.email;
@@ -122,7 +122,7 @@ export const RegistrationForm: React.FC<RegistrationFormProps> = ({ onRegister }
     if (!formData.name.trim() || formData.name.trim().length < 3 || !/^[a-zA-ZÀ-ÿ\s]+$/.test(formData.name)) {
       newErrors.name = formData.name.trim() ? (formData.name.trim().length < 3 ? 'Nome muito curto' : 'Apenas letras') : 'Nome é obrigatório';
     }
-    if (!formData.email.trim() || !/\S+@\S+\.\S+/.test(formData.email)) {
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = formData.email.trim() ? 'Email inválido' : 'Email é obrigatório';
     }
     if (!formData.password.trim() || formData.password.length < 6) {
